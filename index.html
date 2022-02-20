@@ -5,26 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <h2>Console.log Rock Paper Scissors Game</h2>
-    <br>
-    <br>
-    <br>
-    <p>This is just the early stages of the game. Follow these intructions to play</p>
-    <br>
-    <br>
-    <br>
-    <ol>
-        <li>Press either CTRL+SHIFT+I or F12 to open dev tools</li>
-        <li>Make sure dev tools is on "Console" tab</li>
-        <li>Reload Browser</li>
-        <li>Play game</li>
-        <li>Reload Browser to play again</li>
-    </ol>
-    <br>
-    <p>I'll flesh it out over time for more practice with buttons and animations</p>
-    
+    <header class="header">Rock Paper Scissors!</header>
+    <main class="container">
+        <!---->
+        <div class="scoreboard">
+            <h2><span id="h2Score">What's Your Play?</span></h2>
+            <h3><span id="h3Score">First To Five Wins!</span></h3>
+        </div>
+        <div class="game">
+            <div class="score-container">
+                <div class="score-choice player-choice">
+                    <div class ="playerSelection">P1 Choice</div>
+                    <div class ="playerScore"><span id="player-score"> 0</span></div>
+                </div>
+                <div class="tie">
+                    <div class ="tie-2">Tie</div>
+                    <div class ="tieScore"><span id ="tie-score"> 0</span></div>
+                </div>
+                <div class="score-choice cpu-choice">
+                    <div class ="computerSelection">CPU Choice</div>
+                    <div class ="computerScore"><span id="computer-score"> 0</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <div id="rock-button" class="button rock"  data-button="rock">
+                <img src="" alt="Rock"/>
+                <button id="rockbutton" data-sign="rock">Rock</button>
+            </div>
+            <div id="paper-button" class="button paper" data-button="paper">
+                <img src="" alt="Paper"/>
+                <button id="paperbuton" data-sign="paper">Paper</button>
+            </div>
+            <div id="scissors-button" class="button scissors" data-button="scissors">
+                <img src="" alt="Scissors"/>
+                <button id="scissorsbutton" data-sign="scissors">Scissors</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">Placeholder</footer>
 </body>
 </html>

@@ -27,13 +27,3 @@ let tieScore = parseInt(0);
 let win = "You win!"
 let lose = "You lose!"
 let tie = "It's a tie."
-for (let i = 0; i < 5; i++) {
-    let playerSelection = prompt('Rock, Paper, Scissors?');
-    console.log(playerSelection);
-    const computerSelection = computerPlay();
-    console.log(computerSelection);
-    console.log(playRound(playerSelection, computerSelection));
-    console.log("Your score: " + playerScore);
-    console.log("Computer's score: " + computerScore)
-    console.log("You've tied " + tieScore + " times.");
-}
