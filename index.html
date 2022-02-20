@@ -9,44 +9,48 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <header class="header">Rock Paper Scissors!</header>
-    <main class="container">
-        <!---->
-        <div class="scoreboard">
-            <h2><span id="h2Score">What's Your Play?</span></h2>
-            <h3><span id="h3Score">First To Five Wins!</span></h3>
+    <header class="header">
+        <h1 class="title">Rock Paper Scissors!</h1>
+    </header>
+    <main class="main-container">
+        <!--relays info about choices and outcome-->
+        <div class="score-board">
+            <h2 class ="score-info"><span id="scoreInfo">What's Your Play?</span></h2>
+            <h3 class ="score-message"><span id="scoreMessage">First To Five Wins!</span></h3>
         </div>
         <div class="game">
             <div class="score-container">
                 <div class="score-choice player-choice">
-                    <div class ="playerSelection">P1 Choice</div>
-                    <div class ="playerScore"><span id="player-score"> 0</span></div>
+                    <div class ="player-pick" id="playerPick">P1 Choice</div>
+                    <div class ="player-score"><span id="playerScore"> 0</span></div>
                 </div>
-                <div class="tie">
-                    <div class ="tie-2">Tie</div>
-                    <div class ="tieScore"><span id ="tie-score"> 0</span></div>
+                <!--tie class and div assigned to be in line with player and computer designation-->
+                <div class="score-choice tie-choice">
+                    <div class ="tie-pick" id="tiePick">Tie</div>
+                    <div class ="tie-score"><span id ="tieScore"> 0</span></div>
                 </div>
                 <div class="score-choice cpu-choice">
-                    <div class ="computerSelection">CPU Choice</div>
-                    <div class ="computerScore"><span id="computer-score"> 0</span></div>
+                    <div class ="computer-pick" id="computerPick">CPU Choice</div>
+                    <div class ="computer-score"><span id="computerScore"> 0</span></div>
                 </div>
             </div>
         </div>
         <div class="button-container">
-            <div id="rock-button" class="button rock"  data-button="rock">
-                <img src="" alt="Rock"/>
-                <button id="rockbutton" data-sign="rock">Rock</button>
-            </div>
-            <div id="paper-button" class="button paper" data-button="paper">
-                <img src="" alt="Paper"/>
-                <button id="paperbuton" data-sign="paper">Paper</button>
-            </div>
-            <div id="scissors-button" class="button scissors" data-button="scissors">
-                <img src="" alt="Scissors"/>
-                <button id="scissorsbutton" data-sign="scissors">Scissors</button>
-            </div>
+            <!--buttons should be hidden and images should be clickable. check CSS and Javascript files-->
+            <button class="btn btn-block" id="rockBtn">
+                <div class="hand"></div>
+            </button>
+            <button class="btn btn-block" id="paperBtn">
+                <div class="hand"></div>
+            </button>
+            <button class="btn btn-block" id="scissorsBtn">
+                <div class="hand"></div>
+            </button>
         </div>
     </main>
     <footer class="footer">Placeholder</footer>
+    <!--modal will pop up with eventListeners for eng game and be involved with overlay-->
+    <div class="modal" id="modal"></div>
+    <div class="overlay" id="overlay"></div>
 </body>
 </html>
