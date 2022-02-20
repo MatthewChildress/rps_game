@@ -14,10 +14,13 @@ The first attempt was clunky, bloated, and difficult to read. I didn't understan
 
 
 refer to below for original: 
+
 https://github.com/ArchdukeChilly/rps_game_attempt1
 
 Instructions for console.log game
+
 The Odin Project: https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/rock-paper-scissors
 
 Instructions for GUI
+
 The Odin Project: https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/revisiting-rock-paper-scissors
