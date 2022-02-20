@@ -1,0 +1,62 @@
+html, body, #wrapper {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    display:flex;
+    flex-direction:column;
+    margin:0;
+    flex:auto;
+    min-height: 100vh;
+}
+header {
+    display:flex;
+    justify-content:center;
+
+}
+
+main {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+.score-board {
+    display:flex;
+    flex-direction:column;
+}
+.score-message {
+    display:flex;
+    justify-content:center;
+}
+
+.game {
+
+}
+
+.score-container {
+    display:flex;
+    flex-direction:row;
+
+}
+
+.score-choice {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:16px;
+
+}
+
+.button-container {
+    display:flex;
+    gap:32px;
+
+}
+
+footer {
+
+}
+
