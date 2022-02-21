@@ -66,6 +66,10 @@ rockBtn.addEventListener('click',() => handleChoice('rock'));
 paperBtn.addEventListener('click',() => handleChoice('paper'));
 scissorsBtn.addEventListener('click',() =>handleChoice('scissors'));
 function handleChoice(playerSelection) {
+    if (gameWin()) {
+        reset()
+        return
+    }
     const computerSelection = computerPlay();
     playRound(playerSelection, computerSelection)
     clickPlay(playerSelection)
@@ -84,5 +88,20 @@ let clickPlay = (playerSelection,) => {
             break
     }
 }
+let gameWin = () => {
+    return (playerScore === 5 || computerScore === 5)
+}
 
+let reset = () => {
+    playerScore = parseInt(0);
+    computerScore = parseInt(0);
+    tieScore = parseInt(0);
+    tScore.textContent = ' '
+    cScore.textContent = ' '
+    pScore.textContent = ' '
+    playerPick.textContent = ' '
+    computerPick.textContent = ' '
+    scoreInfo.textContent = 'Pick Your Play!'
+    scoreMessage.textContent = 'First To Five Wins!'
+  }
 
