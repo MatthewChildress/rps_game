@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 html, body, #wrapper {
     width: 100%;
     min-height: 100%;
@@ -9,22 +10,32 @@ body {
     margin:0;
     flex:auto;
     min-height: 100vh;
+    font-family: 'Staatliches', cursive;
+    background-color:black;
+    color:orange;
+    
 }
 header {
     display:flex;
     justify-content:center;
+    padding:8px;
 
 }
-
 main {
     display:flex;
     flex-direction: column;
     justify-content:center;
     align-items:center;
+    margin-bottom:100px;
 }
 .score-board {
     display:flex;
     flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    padding: 16px 72px 72px;
+    border:3px solid orange;
+    border-radius:4px;
 }
 .score-message {
     display:flex;
@@ -32,12 +43,18 @@ main {
 }
 
 .game {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin: 32px 72px 72px;
 
 }
 
 .score-container {
     display:flex;
     flex-direction:row;
+    gap:64px;
 
 }
 
@@ -46,28 +63,46 @@ main {
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid orange;
+    border-radius:50%;
+    margin: 0 25px;
     gap:16px;
 
+}
+
+.tie-choice {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width: 50px;
+    height: 100px;
 }
 
 .button-container {
     display:flex;
     gap:32px;
+    border:3px solid orange;
+    border-radius:10px;
+    padding:12px;
 
 }
 
 .button {
-    width: 200px;
-    height: 200px;
-    border: 1px solid white;
+    width: 150px;
+    height: 150px;
+    border: 1px solid orange;
+    border-radius:50%;
     margin: 0 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.4s ease;
   }
-  .button img {
-    width: 150px;
+  .button-text {
+    font-size:48px;
   }
   .button:hover {
     cursor: pointer;
@@ -76,6 +111,15 @@ main {
   }
 
 footer {
+    display:flex;
+    flex-direction:column-reverse;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:center;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    padding:8px;
 
 }
 

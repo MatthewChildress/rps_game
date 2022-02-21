@@ -9,12 +9,25 @@ let tScore = document.getElementById('tieScore');
 let scoreInfo = document.getElementById('scoreInfo');
 let scoreMessage = document.getElementById('scoreMessage');
 
-const choices = ['rock', 'paper', 'scissors'];
+const choices = ['rock','paper','scissors']
 
 let computerPlay = () => {
     const cpuChoice = choices[Math.floor(Math.random() * choices.length)];
+    switch (cpuChoice) {
+        case 'rock':
+            computerPick.textContent = "👊"
+            break
+        case 'paper':
+            computerPick.textContent = "✋"
+            break
+        case 'scissors':
+            computerPick.textContent = "✌"
+            break
+    }
     return cpuChoice;
 }
+
+
 let playRound = (playerSelection,computerSelection) => {
     if ((playerSelection.toLowerCase() === 'rock' && computerSelection === 'scissors') ||
         (playerSelection.toLowerCase() === 'paper' && computerSelection === 'rock') ||
@@ -38,7 +51,7 @@ let playRound = (playerSelection,computerSelection) => {
         tieScore++;
         tScore.textContent = tieScore;
         scoreInfo.textContent = "It's a tie.";
-        scoreMessage.textContent = `${playerSelection} is the same as ${computerSelection}. Multiverse?`;
+        scoreMessage.textContent = `${playerSelection} is just ${computerSelection}.`;
         return tie;
     }
 }
@@ -52,34 +65,24 @@ let tie = "It's a tie."
 rockBtn.addEventListener('click',() => handleChoice('rock'));
 paperBtn.addEventListener('click',() => handleChoice('paper'));
 scissorsBtn.addEventListener('click',() =>handleChoice('scissors'));
-
 function handleChoice(playerSelection) {
     const computerSelection = computerPlay();
     playRound(playerSelection, computerSelection)
-    clickPlay(playerSelection, computerSelection)
-}
+    clickPlay(playerSelection)
 
-let clickPlay = (playerSelection, computerSelection) => {
+}
+let clickPlay = (playerSelection,) => {
     switch (playerSelection) {
         case 'rock':
-            playerPick.textContent = 'ROCK'
+            playerPick.textContent = "👊"
             break
         case 'paper':
-            playerPick.textContent = 'PAPER'
+            playerPick.textContent = "✋"
             break
         case 'scissors':
-            playerPick.textContent = 'SCISSORS'
-            break
-    }
-    switch (computerSelection) {
-        case 'rock':
-            computerPick.textContent = 'ROCK'
-            break
-        case 'paper':
-            computerPick.textContent = 'PAPER'
-            break
-        case 'scissors':
-            computerPick.textContent = 'SCISSORS'
+            playerPick.textContent = "✌"
             break
     }
 }
+
+
