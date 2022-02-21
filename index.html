@@ -8,45 +8,47 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <header class="header">
-        <h1 class="title">Rock Paper Scissors</h1>
-    </header>
-    <main class="main-container">
-        <!--relays info about choices and outcome-->
-        <div class="score-board">
-            <h2 class ="score-info"><span id="scoreInfo">Pick Your Play!</span></h2>
-            <h3 class ="score-message"><span id="scoreMessage">First To Five Wins!</span></h3>
-        </div>
-        <div class="game">
-            <div class="score-container">
-                <div class="score-choice player-choice">
-                    <div class ="player-pick button-text" id="playerPick"></div>
-                    <div class ="player-score"><span id="playerScore"> 0</span></div>
-                </div>
-                <!--tie class and div assigned to be in line with player and computer designation-->
-                <div class="tie-choice">
-                    <div class ="tie-pick" id="tiePick">Tie</div>
-                    <div class ="tie-score"><span id ="tieScore"> 0</span></div>
-                </div>
-                <div class="score-choice cpu-choice">
-                    <div class ="player-pick button-text" id="computerPick"></div>
-                    <div class ="computer-score"><span id="computerScore"> 0</span></div>
+    <div class="wrapper">
+        <header class="header">
+            <h1 class="title">Rock Paper Scissors</h1>
+        </header>
+        <main class="main-container">
+            <!--relays info about choices and outcome-->
+            <div class="score-board">
+                <h2 class ="score-info"><span id="scoreInfo">Choose Your Move</span></h2>
+                <h3 class ="score-message"><span id="scoreMessage">First To Five Wins!</span></h3>
+            </div>
+            <div class="game">
+                <div class="score-container">
+                    <div class="score-choice player-choice">
+                        <div class ="player-pick button-text" id="playerPick"></div>
+                        <div class ="player-score"><span id="playerScore"></span></div>
+                    </div>
+                    <!--tie class and div assigned to be in line with player and computer designation-->
+                    <div class="tie-choice">
+                        <div class ="tie-pick" id="tiePick">Tie</div>
+                        <div class ="tie-score"><span id ="tieScore"></span></div>
+                    </div>
+                    <div class="score-choice cpu-choice">
+                        <div class ="player-pick button-text" id="computerPick"></div>
+                        <div class ="computer-score"><span id="computerScore"></span></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="button-container">
-            <!--buttons should be hidden and images should be clickable. check CSS and Javascript files-->
-            <div id="rock" class="button" >
-                <div class ="button-text" id="rockImg" alt="rock">👊</div>
+            <div class="button-container">
+                <!--buttons should be hidden and images should be clickable. check CSS and Javascript files-->
+                <div id="rock" class="button" >
+                    <div class ="button-text" id="rockImg" alt="rock">👊</div>
+                </div>
+                <div id="paper" class="button" >
+                    <div class ="button-text" id="paperImg" alt="paper">✋</div>
+                </div>
+                <div id="scissors" class="button" >
+                    <div class ="button-text" id="scissorsImg" alt="scissors">✌</d>
             </div>
-            <div id="paper" class="button" >
-                <div class ="button-text" id="paperImg" alt="paper">✋</div>
-            </div>
-            <div id="scissors" class="button" >
-                <div class ="button-text" id="scissorsImg" alt="scissors">✌</d>
-        </div>
-    </main>
-    <footer class="footer">Copyright &#169 Amy Says So</footer>
+        </main>
+        <footer class="footer">Copyright &#169 Amy Says So</footer>
+    </div>
     <script type="text/javascript" src="script.js" defer></script>
 </body>
 </html>

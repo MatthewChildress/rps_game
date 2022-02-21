@@ -5,6 +5,8 @@ This is the second attempt for a Javascript "Rock Paper Scissors" game. Refer to
 
 The second attempt at the console.log version of the game went smoother and took much less time. I experiemented with case switches for the "Player" and "Computer" choices and was able to create a round played with it using string concatenations. I like the set up but unfortunately could not get it to work in a loop. I swapped to a modified version of my original function using "if/else if/else" with "&&" and "||" while practicing arrow functions instead. I like how this turned out. It's tighter and I have a firmer grasp of thse concepts.
 
+After setting up the GUI, I ran into a few problems I wasn't able to figure out. I had wanted to create a modal pop up with buttons that triggered once a game was over. Unfortunately, I had issues figuring out what route to take with it. I had wanted to use actual images as the buttons and WAS able to make that work. I could not get the button selections to mirror the images. I opted to use unicode characters for the icons instead. I was able to add back in switches with my event listeners which was nice for extra practice. Ultimately, the initial exposure and follow up review helped a lot. I was able to go into this attempt with more intent. Before my next project, I plan on taking a few days to review more and maybe tweak this before I continue on.
+
 
 
 
