@@ -9,9 +9,12 @@ let tScore = document.getElementById('tieScore');
 let scoreInfo = document.getElementById('scoreInfo');
 let scoreMessage = document.getElementById('scoreMessage');
 
+
+// array for computer choices
 const choices = ['rock','paper','scissors']
 
 let computerPlay = () => {
+    // randomized choice for PC when function is triggered
     const cpuChoice = choices[Math.floor(Math.random() * choices.length)];
     switch (cpuChoice) {
         case 'rock':
@@ -27,7 +30,7 @@ let computerPlay = () => {
     return cpuChoice;
 }
 
-
+// if/else to determine round winner
 let playRound = (playerSelection,computerSelection) => {
     if ((playerSelection.toLowerCase() === 'rock' && computerSelection === 'scissors') ||
         (playerSelection.toLowerCase() === 'paper' && computerSelection === 'rock') ||
@@ -55,6 +58,8 @@ let playRound = (playerSelection,computerSelection) => {
         return tie;
     }
 }
+
+// defaults for scores & strings for .textContent
 let playerScore = parseInt(0);
 let computerScore = parseInt(0);
 let tieScore = parseInt(0);
@@ -62,9 +67,13 @@ let win = "You win!"
 let lose = "You lose!"
 let tie = "It's a tie."
 
+// event listenrs for button clicks to trigger playRound()
 rockBtn.addEventListener('click',() => handleChoice('rock'));
 paperBtn.addEventListener('click',() => handleChoice('paper'));
 scissorsBtn.addEventListener('click',() =>handleChoice('scissors'));
+
+// function to determine if board needs to be reset
+// otherwise sets up computer choice for playRound()
 function handleChoice(playerSelection) {
     if (gameWin()) {
         reset()
@@ -88,10 +97,14 @@ let clickPlay = (playerSelection,) => {
             break
     }
 }
+
+// ties back into handleChoice() to see if game is over
 let gameWin = () => {
     return (playerScore === 5 || computerScore === 5)
 }
 
+// ties back into handleChoice() to reset game gameWin() is triggered
+// resets all .textContent that displays everything from a function
 let reset = () => {
     playerScore = parseInt(0);
     computerScore = parseInt(0);
@@ -101,7 +114,7 @@ let reset = () => {
     pScore.textContent = ' '
     playerPick.textContent = ' '
     computerPick.textContent = ' '
-    scoreInfo.textContent = 'Pick Your Play!'
+    scoreInfo.textContent = 'Choose Your Move'
     scoreMessage.textContent = 'First To Five Wins!'
   }
 
